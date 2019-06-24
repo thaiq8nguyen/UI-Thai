@@ -1,0 +1,80 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    background-color: @header-bg;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .nav-toggle {
+        display: none;
+        //background-color: @nav-toggle-bg;
+        width: 2.5rem;
+        height: 2rem;
+        color: white;
+
+
+    }
+    .logo {
+        color: @logo-font-color;
+        
+    }
+    .nav-bar {
+        display: none;
+    }
+    
+
+
+}
+.nav-menu {
+    display: none;
+}
+
+@media @small {
+    .header {
+        .nav-toggle {
+            display: block;
+        }
+        .logo {
+            h1 {
+                font-size: @small-logo-font-size;
+            }
+            
+        }
+        .nav-bar {
+            display: block;
+            position: absolute;
+            top: 68px;
+            left: 0;
+            width: 0;
+            height: 100vh; /* This give the height 100% of the screen or, '100% of View Height' */
+            background-color: @header-bg;
+            //border: 1px solid #004D40;
+            border-left: none;
+            border-bottom: none;
+            z-index: 1; /* This set the layer level of the element, it has precendence over initial level of 1*/
+            transition: width 0.5s ease;
+            overflow-x: hidden;
+            .nav-item {
+                list-style-type: none;
+                padding: 2rem;
+                display: block;
+    
+                .nav-link{
+                    text-decoration: none;
+                    font-size: @nav-menu-font-size;
+                    color: @white;
+                }
+            }    
+        }
+        .nav-bar-open{
+            
+            width: 25rem;
+        }
+        
+    }
+    
+    
+    
+}

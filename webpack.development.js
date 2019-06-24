@@ -32,11 +32,23 @@ module.exports = {
                     {
                         loader: "file-loader",
                         options: {
-                            name: "./images/[name].[hash].[ext]"
+                            name: "./images/[name].[ext]"
                         }
                     }
                 ]
 
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "./fonts/[name].[ext]"
+                        }
+                        
+                    }
+                ]
             },
             {
                 test: /\.html$/,
