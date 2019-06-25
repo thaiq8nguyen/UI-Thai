@@ -2,9 +2,12 @@ const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: {
+        index: "./src/index.js",
+        about: "./src/about.js"
+    },
     output: {
-        filename: "bundle.js",
+        filename: "[name]-bundle.js",
         path: path.resolve(__dirname, "dist")
     },
     
@@ -58,8 +61,18 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            template: "./src/index.html"
+            filename: "index.html",
+            title: "Donor Management",
+            template: "./src/index.html",
+            chunks: ["index"]
+
         }),
+        new HTMLWebpackPlugin({
+            filename: "about.html",
+            title: "About",
+            template: "./src/about.html",
+            chunks: ["about"]
+        })
 
         
     ]
