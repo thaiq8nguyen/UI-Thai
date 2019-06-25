@@ -1,0 +1,47 @@
+
+.side-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    //top: 68px;
+    left: 0;
+    width: 0;
+    bottom: 0;
+    height: 100%; /* This give the height 100% of the screen or, '100% of View Height' */
+    background-color: @header-bg;
+    border-left: none;
+    border-bottom: none;
+    z-index: 10002; /* This set the layer level of the element, it has precendence over initial level of 1*/
+    transition: width 0.5s ease;
+    overflow-y: auto;
+    .close-side-menu-btn {
+        text-decoration: none;
+        color: @white;
+        padding: 4rem;
+        text-align: right;
+        font-size: 1.8rem;
+        width: 2rem;
+        height: 2rem;
+        align-self: flex-end;
+    }
+    .side-menu-item {
+        list-style-type: none;
+        margin: 0 3rem;
+        padding: 2rem;
+        display: block;
+        border-bottom: 0.1rem solid @white;
+        
+
+        .side-menu-link{
+            text-decoration: none;
+            font-size: @nav-menu-font-size;
+            color: @white;
+            
+        }
+    }    
+}
+
+
+@media @small {
+    
+}

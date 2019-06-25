@@ -1,20 +1,23 @@
 
 class Header {
-    constructor(headerElement) {
+    constructor(headerElement, sideMenu) {
         this.headerElement =  headerElement;
+        this.sideMenu = sideMenu;
         this.navBar = headerElement.querySelector(".nav-bar");
-        this.navToggle = headerElement.querySelector(".nav-toggle");
-        //this.navToggle.classList.add("fas", "fa-bars");
-        this.navToggle.addEventListener("click", () => {
-            this.toggleNavMenu();
+        this.sideMenuToggle = headerElement.querySelector(".side-menu-toggle");
+        this.sideMenuToggle.addEventListener("click", () => {
+            this.openSideMenu();
         })
+        
     }
 
-    toggleNavMenu() {
-        console.log(this.navBar)
-        this.navBar.classList.toggle("nav-bar-open");
-
+    openSideMenu() {
+        document.body.style.backgroundColor = "#2e3842";
+        this.sideMenu.style.width = "35rem";
+        
     }
 }
 
+
+    
 export default Header;
