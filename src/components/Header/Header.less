@@ -43,23 +43,6 @@
     display: none;
 }
 
-
-@media @small {
-    .header {
-        position: relative;
-        .side-menu-toggle {
-            display: block;
-        }
-        .logo {
-            h1 {
-                font-size: @small-logo-font-size;
-            }
-            
-        }
-               
-    }
-      
-}
 @media @xlarge {
     .header {
         align-content: center;
@@ -75,4 +58,23 @@
 
         }
     }
+}
+@media @small {
+    .header {
+        position: relative;
+        .side-menu-toggle {
+            display: block;
+        }
+        .logo {
+            h1 {
+                font-size: @small-logo-font-size;
+            }
+            
+        }
+        .nav-bar {
+            display: none;
+        }
+               
+    }
+      
 }

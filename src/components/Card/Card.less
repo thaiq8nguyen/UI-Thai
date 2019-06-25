@@ -1,10 +1,143 @@
 .card-container {
     display: flex;
-    flex-direction: column;
     
-    @media @small {
+}
+
+@media @xlarge {
+    .card-container {
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 5rem 0;
+        flex-wrap: wrap;
+        
         .call-to-action {
+            width: 30%;
+            position: relative;
             
+            .text-content {
+                position: absolute;
+                z-index: 2;
+                text-align: center;
+                top: 1.5rem;
+                left: 0.8rem;
+                padding: 0.5rem;
+                color: @white;
+                
+                
+                h1 {
+                    
+                    padding: 1rem 0;
+                    font-size: 3rem;
+                }
+                p {    
+                    font-style: italic;
+                    font-size: 2rem;
+                    margin-bottom: 7.4rem;
+                }
+                
+            }
+            img {
+                filter: brightness(75%);
+               
+                
+            }
+            .call-to-action-btn {
+                background: #3FB6E9;
+                padding: 1rem 3rem;
+                text-decoration: none;
+                color: @button-font-color;
+                font-size: 1.7rem;
+                border-radius: 0.3rem;
+
+                &:hover {
+                    background: #38A3D1;
+                }        
+            }
+        }
+        #success-stories {
+            width: 30%;
+            padding: 2rem 3rem;
+            background-color: #272833;
+            color: @white;
+            
+            h2 {  
+                text-align: center;
+                margin: 0 auto;
+                width: 70%;
+                padding-bottom: 2rem;
+                border-bottom: 0.3rem solid white;
+            }
+            .success-story{
+                margin-top: 2rem;
+                margin-bottom: 0.9rem;
+            }
+    
+            .customer-name {
+                text-align: right;
+                .company {
+                    font-style: italic
+                }
+            }
+    
+        }
+        #our-product {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 3rem;
+            flex: 1;
+            margin-top: 5rem;
+            .text-content {
+                h2 {  
+                    text-align: center;
+                    margin: 0 auto;
+                    width: 70%;
+                    padding-bottom: 2rem;
+                    border-bottom: 0.3rem solid white;
+                }
+                ul {
+                    margin-top: 2rem;
+                }
+            }
+            .qualities {
+                margin-top: 4rem;
+                display: flex;
+                justify-content: space-around;
+                justify-content: center;
+                flex-wrap: wrap;
+                .quality {
+                    text-align: center;
+                    width: 33%;
+                    p {
+                        margin-top: 2rem;
+                    }
+    
+                }
+                .sign-up-btn {
+                    margin-top: 2rem;
+                    background: orangered;
+                    padding: 1rem 3rem;
+                    text-decoration: none;
+                    color: @button-font-color;
+                    font-size: 1.7rem;
+                    border-radius: 0.3rem;
+
+                    &:hover {
+                        background-color: #E53D00;
+                    }
+                    
+                }
+            }         
+        }
+    }    
+}
+    
+@media @small {
+    .card-container {
+        margin:0;
+        flex-direction: column;
+        justify-content: center;
+        .call-to-action {
+            width: 100%;
             position: relative;
             
             .text-content {
@@ -45,15 +178,15 @@
                 color: @button-font-color;
                 font-size: 1.7rem;
                 border-radius: 0.3rem;
-
+    
             }
         }
         #success-stories {
-            
+            width: 100%;
             padding: 2rem 3rem;
             background-color: #272833;
             color: @white;
-
+    
             h2 {  
                 text-align: center;
                 margin: 0 auto;
@@ -64,21 +197,23 @@
             .success-story{
                 margin-top: 2rem;
             }
-
+    
             .customer-name {
                 text-align: right;
                 .company {
                     font-style: italic
                 }
             }
-
+    
         }
         #our-product {
+            width: 100%;
             display: flex;
             flex-direction: column;
             padding: 2rem 3rem;
             background-color: #3FB6E9;
             color: @white;
+            margin: 0;
             .text-content {
                 h2 {  
                     text-align: center;
@@ -103,7 +238,7 @@
                     p {
                         margin-top: 2rem;
                     }
-
+    
                 }
                 .sign-up-btn {
                     margin-top: 2rem;
@@ -115,12 +250,11 @@
                     border-radius: 0.3rem;
                     
                 }
-            }
-            
-
-            
+            }         
         }
-        
 
     }
+    
 }
+
+

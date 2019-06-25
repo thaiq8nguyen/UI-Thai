@@ -1,5 +1,4 @@
 .carousel {
-    display: none;
     .width-100();
     .flex(center, center);
     height: 700px;
@@ -41,12 +40,12 @@
   
     .slide-left {
       animation-name: slideLeft;
-      animation-duration: .7s;
+      animation-duration: 1s;
       display: block;
     }
     .slide-right {
       animation-name: slideRight;
-      animation-duration: .7s;
+      animation-duration: 1s;
       display: block;
     }
   }
@@ -54,31 +53,48 @@
   
   @keyframes slideLeft {
     0% {
-      margin-left: -100%;
       
-    }
+        opacity: 0;
+        
+      }
   
-    100% {
-      margin-left: 0%;
-      
-    }  
+      50% {
+          opacity: 0.5;
+      }
+    
+      100% {
+        
+        opacity: 1;
+      }  
   }
   
   @keyframes slideRight {
     0% {
-      margin-right: -100%;
       
+      opacity: 0;
+      
+    }
+
+    50% {
+        opacity: 0.5;
     }
   
     100% {
-      margin-right: 0%;
       
+      opacity: 1;
     }  
   }
-
   @media @xlarge {
+    .carousel {
+        display: block;
+        
+    }
+}
+  
+  @media @small {
       .carousel {
-          //display: block;
-          
+          display: none;
       }
-  }
+}
+
+  
