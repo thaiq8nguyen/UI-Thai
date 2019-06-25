@@ -1,6 +1,105 @@
 .card-container {
+    display: flex;
+    flex-direction: column;
     
     @media @small {
+        .call-to-action {
+            
+            position: relative;
+            
+            .text-content {
+                position: absolute;
+                z-index: 2;
+                margin: 0 auto;
+                text-align: center;
+                left: 0;
+                right: 0;
+                top: 3%;
+                width: 85%;
+                
+                h1 {
+                    margin-top: 2rem;
+                    margin-bottom: 3.5rem;
+                    border-top: 0.4rem solid @white;
+                    border-bottom: 0.4rem solid @white;
+                    padding: 1rem 0;
+                    color: @white
+                }
+                p {
+                    color: @white;
+                    font-style: italic;
+                    font-size: 1.8rem;
+                    margin-bottom: 2.8rem;
+                }
+                
+            }
+            img {
+                filter: brightness(50%);
+                margin-bottom: -2px
+                
+            }
+            .call-to-action-btn {
+                background: #3FB6E9;
+                padding: 1rem 3rem;
+                text-decoration: none;
+                color: @button-font-color;
+                font-size: 1.7rem;
+                border-radius: 0.3rem;
+
+            }
+        }
+        #success-stories {
+            
+            padding: 2rem 3rem;
+            background-color: #272833;
+            color: @white;
+
+            h2 {  
+                text-align: center;
+                margin: 0 auto;
+                width: 70%;
+                padding-bottom: 2rem;
+                border-bottom: 0.3rem solid white;
+            }
+            .success-story{
+                margin-top: 2rem;
+            }
+
+            .customer-name {
+                text-align: right;
+                .company {
+                    font-style: italic
+                }
+            }
+
+        }
+        #our-product {
+            padding: 2rem 3rem;
+            background-color: #3FB6E9;
+            color: @white;
+            .text-content {
+                h2 {  
+                    text-align: center;
+                    margin: 0 auto;
+                    width: 70%;
+                    padding-bottom: 2rem;
+                    border-bottom: 0.3rem solid white;
+                }
+                ul {
+                    margin-top: 2rem;
+                }
+            }
+            .qualities {
+                margin-top: 2rem;
+                display: flex;
+                justify-content: space-around;
+                .quality {
+                    text-align: center
+                }
+            }
+            
+        }
         
+
     }
 }
