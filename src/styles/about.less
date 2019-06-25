@@ -1,0 +1,34 @@
+@import (css) url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap");
+@import "./variables.less";
+@import "./mixins.less";
+@import "./reset.less";
+@import "./global.less";
+@import "./about.less";
+
+@import "../components/Header/Header.less";
+@import "../components/SideMenu/SideMenu.less";
+@import "../components/Team/Team.less";
+@import "../components/Footer/Footer.less";
+
+
+.main-content {
+    padding: 0 5rem;
+    .about-us {
+        margin: 5rem 0;
+
+        .about-us-text {
+            .description {
+                margin-top: 2rem;
+                font-size: 1.8rem;
+            }    
+        }
+    }   
+}
+
+@media @xlarge {
+
+}
+
+@media @xsmall {
+
+}
