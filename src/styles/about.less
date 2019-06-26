@@ -3,7 +3,7 @@
 @import "./mixins.less";
 @import "./reset.less";
 @import "./global.less";
-@import "./about.less";
+
 
 @import "../components/Header/Header.less";
 @import "../components/SideMenu/SideMenu.less";
@@ -25,10 +25,126 @@
     }   
 }
 
-@media @xlarge {
+.member-profile-panel {
+    display: flex;
+    flex-direction: column; 
+    z-index: 10002;
+    overflow-y: hidden;
+    top: 100%;
+    transition: all 0.5s ease;
+    position: fixed;
+    background: @white;
+    height: 100%;
+    width: 100%;
+    .close-panel-btn {
+        padding: 2.5rem;
+        text-align: right;
+        font-size: 2rem;
+        align-self: flex-end;
+        color: @primary-link-color;
+    }
+    .main {
+        .member {
+            display: flex;
+            flex-direction: row;
+            padding: 5rem;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .text-content {
+                text-align: center;
+                .name {
+                    font-size: 2.5rem;
+                    color: @primary-link-color;
+                }
+            }   
+        }
+        .brief-bio {
+            padding: 1rem 5rem;
+            font-size: 1.8rem;
+        }    
+    }
+    
 
 }
 
-@media @xsmall {
+@media @xlarge {
+    .member-profile-panel {
+        min-height: 100vh;
+        .main {
+            flex: 1;
+            margin: 0 20rem;
+            .member {
+                justify-content: center;
+                .text-content {
+                    margin-left: 15rem;
+                    .name {
+                        font-size: 2.2rem;
+                    }
+                }
+            }
+            .brief-bio {
+                text-align: center;
+            }
+            
+            
+        }
+        .panel-footer {
+            
+            display: flex;
+            justify-content: space-around;
+            padding: 3rem;
+            
+            a {
+                color: @primary-link-color;
+            }
+            
+            
+        }
+        
+    }
+    .member-profile-panel-slide-up {
+        top: 0;
+        
+    } 
+}
 
+@media @small {
+    .member-profile-panel {
+        min-height: 100vh;
+        .main {
+            flex: 1;
+            margin: 0;
+            .member {
+                justify-content: space-between;
+                .text-content {
+                    margin-left: 0;
+                    .name {
+                        font-size: 2.2rem;
+                    }
+                }
+            }
+            .brief-bio {
+                text-align: left;
+            }
+            
+        }
+        .panel-footer {
+            
+            display: flex;
+            justify-content: space-around;
+            padding: 3rem;
+            
+            a {
+                color: @primary-link-color;
+            }
+            
+            
+        }
+        
+    }
+    .member-profile-panel-slide-up {
+        top: 0;
+        
+    }
 }
