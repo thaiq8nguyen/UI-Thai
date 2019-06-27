@@ -59,7 +59,14 @@ class Card {
     }
 
     displayError(error) {
+        const dataContainer = this.element.querySelector(".data-content");
+        const errorTemplate = `<div class="donation-error">
+        <h2>Errors have occured while retrieving server data</h2>
+        </div>`;
 
+        dataContainer.innerHTML = errorTemplate;
+        
+        
     }
 
     formatNumber(num) {
