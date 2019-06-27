@@ -1,0 +1,40 @@
+@import (css) url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap");
+@import "./variables.less";
+@import "./mixins.less";
+@import "./reset.less";
+@import "./global.less";
+
+html {
+    height: 100%;
+    body {
+        height: 100%;
+        .container {
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            height: 100%;
+            .error {
+                text-align: center;
+                h1 {
+                    margin-bottom: 2rem;
+                }
+                h2 {
+                    margin-bottom: 3rem;
+                }
+                a {
+                    text-decoration: none;
+                    font-size: 2rem;
+                    color: black;
+                    padding: 1rem 2rem;
+                    background: @button-bg;
+                }
+            }
+            
+            
+            
+        }
+    }
+}
+
