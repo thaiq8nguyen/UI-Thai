@@ -43,7 +43,7 @@
 }
 
 
-@media @xlarge {
+@media @desktop {
     .header {
         align-content: center;
         .nav-bar {
@@ -62,28 +62,44 @@
                     padding: 1rem;
                     border-radius: 0.7rem;
                     .nav-link {
-                        border: none;
-                        
+                        border: none;               
                     }
                     &:hover {
                         background-color: #0063B4;
-                    }
-
-                    
-                    
-                }
-                
-                
+                    }     
+                }            
             }
-            
-
         }
     }
     .current-link-page {
         border-bottom: 0.1rem solid @white;
     }
 }
-@media @small {
+@media @smallTablet {
+    .header {
+        .side-menu-toggle {
+            display: block;
+        }
+        .nav-bar {
+            
+            .nav-links {
+                
+            }
+            li {
+
+            }
+            li:last-child {
+                .nav-link {
+
+                }
+                &:hover {
+
+                }
+            }
+        }
+    }
+}
+@media @largeMobile {
     .header {
         position: relative;
         .side-menu-toggle {

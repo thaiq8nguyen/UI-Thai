@@ -35,7 +35,7 @@
     position: fixed;
     background: @white;
     height: 100%;
-    width: 100%;
+    width: 100%;  
     .close-panel-btn {
         padding: 2.5rem;
         text-align: right;
@@ -51,6 +51,7 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
+            
             .text-content {
                 text-align: center;
                 .name {
@@ -64,11 +65,17 @@
             font-size: 1.8rem;
         }    
     }
-    
+    .panel-footer {
+        display: flex;
+        justify-content: space-around;
+        a {
+            color: @primary-link-color;    
+        }
 
+    }
 }
 
-@media @xlarge {
+@media @desktop {
     .member-profile-panel {
         min-height: 100vh;
         .main {
@@ -85,31 +92,46 @@
             }
             .brief-bio {
                 text-align: center;
-            }
+            }               
+        }
+        .panel-footer {
             
+            padding: 3rem;    
+                     
+        }    
+    }
+}
+@media @smallTablet {
+    .member-profile-panel {
+        min-height: 100vh;
+        .main {
+            flex: 1;
+            margin: 0 10rem;
+            .member {
+                
+                .text-content {
+                    
+                    .name {
+                        
+                    }
+                }
+            }
+            .brief-bio {
+                
+            }
             
         }
         .panel-footer {
             
-            display: flex;
-            justify-content: space-around;
-            padding: 3rem;
+            
             
             a {
-                color: @primary-link-color;
-            }
-            
-            
-        }
-        
+                
+            }         
+        }       
     }
-    .member-profile-panel-slide-up {
-        top: 0;
-        
-    } 
 }
-
-@media @small {
+@media @largeMobile {
     .member-profile-panel {
         min-height: 100vh;
         .main {
@@ -143,8 +165,9 @@
         }
         
     }
-    .member-profile-panel-slide-up {
-        top: 0;
-        
-    }
+    
+}
+.member-profile-panel-slide-up {
+    top: 0;
+    
 }

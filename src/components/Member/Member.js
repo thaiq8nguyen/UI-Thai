@@ -18,7 +18,6 @@ class Member {
         
     }
     openProfilePanel() {
-        console.log("click");
         new MemberProfilePanel(
             {
                 name: this.name.textContent, 

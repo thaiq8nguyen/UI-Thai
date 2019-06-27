@@ -84,17 +84,22 @@
       opacity: 1;
     }  
   }
-  @media @xlarge {
-    .carousel {
-        display: block;
-        
-    }
+@media @desktop {
+  .carousel {
+      display: block;
+      
+  }
+}
+@media @smallTablet {
+  .carousel {
+    height: 500px;  
+  }
 }
   
-  @media @small {
-      .carousel {
-          display: none;
-      }
+@media @largeMobile {
+  .carousel {
+      display: none;
+  }
 }
 
   
