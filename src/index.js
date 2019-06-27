@@ -9,10 +9,11 @@ import Card from "./components/Card/Card.js";
 const headerContainer = document.querySelector(".header");
 const sideMenuContainer = document.querySelector(".side-menu");
 const carouselContainer = document.querySelector(".carousel");
-const cardContainer = document.querySelector(".card-container");
+const cards = document.querySelectorAll(".cards");
 
 new Header(headerContainer, sideMenuContainer);
 new SideMenu(sideMenuContainer);
 new Carousel(carouselContainer);
-new Card(cardContainer);
+
+cards.forEach(card => new Card(card));
 
