@@ -8,6 +8,7 @@
     "production": "cross-env NODE_ENV=production webpack --config webpack.production.js --mode production",
     "prod": "npm run production",
     "development": "cross-env NODE_ENV=development webpack --config webpack.development.js --mode development ",
+    "dev": "npm  run development",
     "watch": "npm run development -- --watch",
     "dev:debug": "debug --mode development",
     "start": "webpack-dev-server --config webpack.development.js --open --host 0.0.0.0"

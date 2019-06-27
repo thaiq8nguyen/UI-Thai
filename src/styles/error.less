@@ -9,27 +9,49 @@ html {
     body {
         height: 100%;
         .container {
-        
             display: flex;
             justify-content: center;
             align-items: center;
-            
             height: 100%;
             .error {
+                border: 0.1rem solid black;
+                border-radius: 1rem;
+                //padding: 3rem 1rem;
+                margin: 0 2.5rem;
                 text-align: center;
-                h1 {
-                    margin-bottom: 2rem;
+                .header {
+                    background: red;
+                    padding: 2.5rem 0;
+                    color: @white;             
                 }
-                h2 {
-                    margin-bottom: 3rem;
+                .main-content {
+                    padding: 3rem 2rem;
+                    background: whitesmoke;
+                    h1 {
+                        margin-bottom: 2rem;
+                    }
+                    h2 {
+                        margin-bottom: 3rem;
+                    }
                 }
-                a {
-                    text-decoration: none;
-                    font-size: 2rem;
-                    color: black;
-                    padding: 1rem 2rem;
-                    background: @button-bg;
+                .footer {
+                    padding: 2.5rem 0;
+                    background: whitesmoke;
+                    a {
+                        text-decoration: none;
+                        font-size: 2rem;
+                        color: white;
+                        padding: 1rem 3rem;
+                        background: red;
+                        border-radius: 4rem;
+                        &:hover {
+                            background: @white;
+                            color: black;
+                        }
+                    }
                 }
+                
+                
             }
             
             
