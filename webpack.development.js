@@ -78,6 +78,7 @@ module.exports = {
             filename: "error.html",
             title: "Error",
             template: "./src/error.html",
+            chunks: ["error"]
             
         })
 
