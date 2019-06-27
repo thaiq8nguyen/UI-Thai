@@ -11,6 +11,7 @@
         flex-wrap: wrap;
         
         .call-to-action {
+            order: 2;
             width: 30%;
             position: relative;
             
@@ -50,7 +51,46 @@
                 }        
             }
         }
+        #current-donation {
+            order: 1;
+            padding: 5rem 3rem;
+            width: 100%;
+            margin-bottom: 5rem;
+            .text-content {
+                margin-bottom: 2rem;
+                     
+                h2 {
+                    text-align: center;
+                    padding-bottom: 2rem;      
+                }
+            }
+            .data-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                
+                .donations {
+                    background: #272833;
+                    color: @white;
+                    padding: 3rem;
+                    margin: 0.5rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    .names {
+                        font-size: 2.8rem;
+                        margin-bottom: 4rem;
+                    }
+                    .stats {
+                        font-size: 3rem;
+                    }            
+                }             
+            }
+        }
         #success-stories {
+            order: 2;
             width: 30%;
             padding: 2rem 3rem;
             background-color: #272833;
@@ -77,6 +117,7 @@
     
         }
         #our-product {
+            order: 3;
             display: flex;
             flex-direction: column;
             padding: 2rem 3rem;
@@ -127,6 +168,7 @@
             }         
         }
         #newsletter-subscribe {
+            order: 4;
             width: 100%;
             display: flex;
             padding: 3rem;
@@ -178,6 +220,7 @@
         flex-direction: column;
         justify-content: center;
         .call-to-action{
+            order: 2;
             width: 100%;
             position: relative;
             .text-content {
@@ -220,7 +263,46 @@
             }
             
         }
+        #current-donation {
+            order: 1;
+            padding: 5rem 3rem;
+            width: 100%;
+            margin-bottom: 5rem;
+            .text-content {
+                margin-bottom: 2rem;
+                     
+                h2 {
+                    text-align: center;
+                    padding-bottom: 2rem;      
+                }
+            }
+            .data-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                
+                .donations {
+                    background: #272833;
+                    color: @white;
+                    padding: 3rem;
+                    margin: 0.5rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    .names {
+                        font-size: 2.8rem;
+                        margin-bottom: 4rem;
+                    }
+                    .stats {
+                        font-size: 3rem;
+                    }            
+                }             
+            }
+        }
         #success-stories {
+            order: 2;
             width: 100%;
             padding: 2rem 3rem;
             background-color: #272833;
@@ -246,6 +328,7 @@
     
         }
         #our-product {
+            order: 3;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -293,6 +376,7 @@
             }         
         }
         #newsletter-subscribe {
+            order: 4;
             display: flex;
             padding: 3rem;
             justify-content: center;
@@ -334,9 +418,7 @@
                     }
                 }
             }
-        }
-        
-        
+        }     
     }
 }
 @media @largeMobile {
@@ -404,6 +486,41 @@
                 border-radius: 0.3rem;
     
             }
+        }
+        #current-donation {
+            padding: 5rem 3rem;
+            .text-content {
+                margin-bottom: 2rem;
+
+                h2 {
+                    text-align: center;
+                    margin: 0 auto;
+                    width: 70%;
+                    padding-bottom: 2rem;
+                    border-bottom: 0.3rem solid black;
+                }
+            }
+            .data-content {
+                display: flex;
+                flex-direction: column;
+                
+                .donations {
+                    background: #272833;
+                    color: @white;
+                    padding: 1rem;
+                    margin: 0.5rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .names {
+                        font-size: 1.8rem;
+                    }
+                    .stats {
+                        font-size: 2rem;
+                    }            
+                }             
+            }
+
         }
         #success-stories {
             width: 100%;
