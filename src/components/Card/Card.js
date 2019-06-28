@@ -18,9 +18,6 @@ class Card {
 
             const totalDonorCounts = await axios.get("https://donor-manage-bw.herokuapp.com/api/donor/count")
 
-            
-            
-
             this.displayDonations([totalDonationAmounts, totalDonationCounts, totalDonorCounts])
 
         } catch(error) {
