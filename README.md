@@ -3,12 +3,12 @@
 ![mobile_screen](./screenshots/mobile_screen.png) 
 ![desktop_screen](./screenshots/desktop_screen.png)
 
-###About
+### About
 This is a responsive multi-page marketing web page for the *GiveMore* web application. The application is intended toward donation or fundraising companies who want to keep track of their donors and donor amounts.
 
 The marketing pages built from many reusable Javascript components where each component is consisted of HTML, Less, and vanilla Javascript.  No Javascript frameworks and UI libraries were used in the contruction of the web pages.
 
-###Installation
+### Installation
 The entire web pages source files are in the *.src* directory.  The files are separated by *assets*, *components*, *styles* folders. The Javascript and HTML of each page are stored in the root directory. Below is an explanation of each page:
 
 1.index.html: **this is the home page to display a call-to-action about a donation cause and some introductions about the app.**
@@ -19,9 +19,22 @@ The entire web pages source files are in the *.src* directory.  The files are se
 
 The *.dist* contained the compacted form of the entire marketing pages. Each Javascript file is minified to reduce its size.
 
-###Deployment
+### Deployment
 The production version of the web page is deployed on Amazon AWS [here](http://tqn-buildweekone.s3-website-us-west-2.amazonaws.com/index.html)
 
-###Local Environment
+### Local Environment
 I recommend to have *[npm](https://www.npmjs.com/)* or *[yarn](https://yarnpkg.com/en/)* setup and *[webpack](https://webpack.js.org/)* setup for the project.  For live testing on a browser, I used *[webpack-dev-server](https://github.com/webpack/webpack-dev-server)* to auto compile the project. For complete listing of all the packages, please review *package.json* file.
+
+### Limitations
+The page had been tested with viewing resolutions below:
+
+1. iPhone 5 320x668 or other mobile devices with the same resolution.
+2. iPhone 6 375x667 or other mobile devices with the same resolution.
+3. iPad 1024x768 other mobile devices with the same resolution.
+4. Notebook or desktop monitor 1440x900
+
+Viewing the page on other resolutions than the above resolution is not recommended. Future fixes will be applied to solve the viewing issue.
+
+
+
 
